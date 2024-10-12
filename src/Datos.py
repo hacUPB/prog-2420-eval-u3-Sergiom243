@@ -6,7 +6,7 @@ while vehiculo not in  ['1', '2']:
     print ('Por favor elija una opcion valida entre 1 carro y 2 camioneta')
     vehiculo = input('Por favor indique de que tipo es su vehiculo\n1. Vehiculo convencional/carro \n2.Camioneta: ')
 
-print("Muchas gracias por seleccionar, estos son los planes que puede seleccionar para el lavado de su carro")
+print("Muchas gracias por indicar su tipo de vehiculo, estos son los planes que puede seleccionar para el lavado de su carro")
 
 
 
@@ -46,19 +46,24 @@ def registro_lavado():
 
 
     for Lavado_1 in Plan_1:
-        print(f"Plan#1 \nNombre del plan: {Lavado_1['Tipo 1']}, Descripcion: {Lavado_1['Descripción']}, Precio de Carros: {Lavado_1['Precio1']}, Precio Camionetas {Lavado_1['Precio2']}")
+        print(f"Plan#1 \nNombre del plan: {Lavado_1['Tipo 1']}, Descripcion: {Lavado_1['Descripción']}, Precio para Carros: {Lavado_1['Precio1']}, Precio para Camionetas {Lavado_1['Precio2']}")
 
     for Lavado_2 in Plan_2:
-        print(f"Plan#2 \nNombre del plan: {Lavado_2['Tipo 2']}, Descripción: {Lavado_2['Descripción']}, Precio Carros: {Lavado_2['Precio1']}, Precio Camionetas: {Lavado_2['Precio2']}")
+        print(f"Plan#2 \nNombre del plan: {Lavado_2['Tipo 2']}, Descripción: {Lavado_2['Descripción']}, Precio para Carros: {Lavado_2['Precio1']}, Precio para Camionetas: {Lavado_2['Precio2']}")
 
     for Lavado_3 in Plan_3:
-        print(f"Plan#3 \nNombre del plan: {Lavado_3['Tipo 3']}, Descripción: {Lavado_3['Descripción']}, Precio Carros: {Lavado_3['Precio1']}, Precio Camionetas: {Lavado_3['Precio2']}")
+        print(f"Plan#3 \nNombre del plan: {Lavado_3['Tipo 3']}, Descripción: {Lavado_3['Descripción']}, Precio para Carros: {Lavado_3['Precio1']}, Precio para Camionetas: {Lavado_3['Precio2']}")
 
 
 registro_lavado()
+
 
 Plan_Seleccionado = input('Despues de revisar los planes y precio según su vehiculo por favor elija el que mas desee\n1. Plan#1\n2. Plan#2\n3. Plan#3')
 
 while Plan_Seleccionado not in ['1', '2', '3']:
     print('Por favor elija el numero del plan que desee correctamente')
     Plan_Seleccionado = input('Despues de revisar los planes y precio según su vehiculo por favor elija el que mas desee\n1. Plan#1\n2. Plan#2\n3. Plan#3')
+
+
+while vehiculo is ["1"]:
+    Registro_final = print(f"Su registro es")
