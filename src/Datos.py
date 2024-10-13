@@ -1,5 +1,6 @@
 
 print("Bienvenido a Lavafante")
+nombre_usuario = input("Por favor ingrese su nombre: ")
 vehiculo = input('Por favor indique de que tipo es su vehiculo\n1. Vehiculo convencional/carro \n2.Camioneta')
 
 while vehiculo not in  ['1', '2']:
@@ -7,9 +8,6 @@ while vehiculo not in  ['1', '2']:
     vehiculo = input('Por favor indique de que tipo es su vehiculo\n1. Vehiculo convencional/carro \n2.Camioneta: ')
 
 print("Muchas gracias por indicar su tipo de vehiculo, estos son los planes que puede seleccionar para el lavado de su carro")
-
-
-
 
 Plan_1 = []
 Plan_2 = []
@@ -64,6 +62,30 @@ while Plan_Seleccionado not in ['1', '2', '3']:
     print('Por favor elija el numero del plan que desee correctamente')
     Plan_Seleccionado = input('Despues de revisar los planes y precio según su vehiculo por favor elija el que mas desee\n1. Plan#1\n2. Plan#2\n3. Plan#3')
 
+if Plan_Seleccionado == '1':
+    plan = Plan_1[0]
+elif Plan_Seleccionado == '2':
+    plan = Plan_2[0]
+elif Plan_Seleccionado == '3':
+    plan = Plan_3[0]
 
-while vehiculo is ["1"]:
-    Registro_final = print(f"Su registro es")
+if vehiculo == '1':
+    precio = plan['Precio1']
+elif vehiculo == '2':
+    precio = plan['Precio2']
+
+Registro_final = print(f'Su registro final es el {plan} por un precio de {precio} según su tipo de vehículo.')
+
+registro_usuarios = {}
+
+def agregar_registro_usuario(nombre, vehiculo, plan, precio):
+
+    registro_usuarios[nombre] = {
+        'vehiculo': vehiculo,
+        'plan': plan,
+        'precio': precio
+    }
+
+agregar_registro_usuario(nombre_usuario, vehiculo, Plan_Seleccionado, precio)
+
+print(registro_usuarios)
