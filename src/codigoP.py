@@ -89,3 +89,14 @@ def agregar_registro_usuario(nombre, vehiculo, plan, precio):
 agregar_registro_usuario(nombre_usuario, vehiculo, Plan_Seleccionado, precio)
 
 print(registro_usuarios)
+
+def repetir_o_leer(nombre):
+    opcion = input(f"\nHola {nombre}, ¿qué deseas hacer?\n1. Registrar un nuevo lavado\n2. Ver registros anteriores\nElige 1 o 2: ")
+
+    if opcion == '1':
+        return 'registrar'
+    elif opcion == '2':
+        return 'leer'
+    else:
+        print("Opción no válida, por favor intenta de nuevo.")
+        return repetir_o_leer(nombre)  
