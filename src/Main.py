@@ -10,24 +10,24 @@ def seleccionar_vehiculo():
     return vehiculo
 
 def registro_lavado():
-    # Planes de lavado
+    # Planes de lavado, aqui se crean los 3 diccionarios que contienen los 3 planes de lavado
     Plan_1 = {
         "Tipo": "Lavado básico",
-        "Descripción": "Lavado de carrocería con shampoo encerado básico",
+        "Descripción": "Es es un lavado exclusivamente de la carroceria del vehiculo con shampoo encerado básico y aclarado",
         "Precio1": 30000,
         "Precio2": 38000
     }
 
     Plan_2 = {
         "Tipo": "Lavado extra",
-        "Descripción": "Lavado de carrocería, tapicería y asientos",
+        "Descripción": "Lavado externo de carroceria encerado básico y lavado interno de la tapiceria y asientos del vehiculo",
         "Precio1": 55000,
         "Precio2": 65000
     }
 
     Plan_3 = {
         "Tipo": "Lavado Premium",
-        "Descripción": "Lavado completo, motor, rines, neumáticos y encerado premium",
+        "Descripción": "Lavado externo e interno de tapiceria, asientos y aplicación de encerado al vehiculo, lavado de motor, rines, neumáticos",
         "Precio1": 85000,
         "Precio2": 95000
     }
