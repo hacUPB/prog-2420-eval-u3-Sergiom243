@@ -63,20 +63,20 @@ def seleccionar_plan(vehiculo):
     # Registro final
     print(f'Su registro final es el {plan["Tipo"]} por un precio de {precio} según su tipo de vehículo.')
     return plan
-
+#creamos un registro o historial de los procesos anteriores
 def guardar_en_historial(nombre_usuario, plan):
     if nombre_usuario not in historial_procesos:
         historial_procesos[nombre_usuario] = []
     historial_procesos[nombre_usuario].append(plan)
-
+#con el registro anterior acá podemos buscarlos por  el nombre
 def buscar_procesos_por_nombre():
-    nombre_buscar = input("Ingrese el nombre para buscar procesos: ")
-    if nombre_buscar in historial_procesos:
-        print(f"Procesos realizados para {nombre_buscar}:")
-        for proceso in historial_procesos[nombre_buscar]:
+    buscar_nombre = input("Ingrese el nombre para buscar procesos: ")
+    if buscar_nombre in historial_procesos:
+        print(f"Procesos realizados para {buscar_nombre}:")
+        for proceso in historial_procesos[buscar_nombre]:
             print(proceso)
     else:
-        print(f"No se encontraron procesos para el nombre {nombre_buscar}")
+        print(f"No se encontraron procesos para el nombre {buscar_nombre}")
 
 def nueva_eleccion():
     # Preguntar al usuario qué quiere hacer a continuación
